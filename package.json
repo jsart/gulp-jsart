@@ -1,0 +1,45 @@
+{
+  "name": "gulp-jsart",
+  "version": "1.0.0",
+  "description": "gulp-jsart是一个gulp插件，用于编译jsart文件",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "YanEr",
+  "license": "ISC",
+  "keywords": [
+    "gulp",
+    "art",
+    "jsart"
+  ],
+  "homepage": "https://github.com/jsart/gulp-jsart",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsart/gulp-jsart.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsart/gulp-jsart/issues"
+  },
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "chalk": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "merge": "^1.2.1",
+    "require-from-string": "^2.0.2",
+    "through2": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
