@@ -1,9 +1,11 @@
+const requireFunc =
+  typeof __webpack_require__ === 'function' ? __non_webpack_require__ : require
 const path = require('path')
 const merge = require('merge')
 const through2 = require('through2')
 const gulpUtil = require('gulp-util')
 const tpl = require('art-template')
-const reload = require('require-reload')(require)
+const reload = require('require-reload')(requireFunc)
 
 const PLUGIN_NAME = 'gulp-jsart'
 const PluginError = gulpUtil.PluginError
@@ -32,7 +34,7 @@ module.exports = function(options) {
 
     if (dataTag && dataTag.length >= 1) {
       const dataPath = path.join(fileDir, dataTag[1])
-      if (options.mode === 'prod') data = require(dataPath)
+      if (options.mode === 'prod') data = requireFunc(dataPath)
       if (options.mode === 'dev') data = reload(dataPath)
       art = art.replace(dataTag[0], '')
     }

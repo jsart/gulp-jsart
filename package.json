@@ -1,6 +1,6 @@
 {
   "name": "gulp-jsart",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "gulp-jsart是一个gulp插件，用于jsart web编译工具中的art文件的转html",
   "main": "lib/index.js",
   "files": [
